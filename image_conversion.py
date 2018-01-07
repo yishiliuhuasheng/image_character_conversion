@@ -12,7 +12,7 @@ scale = 1 # if original image is two big set it to lower than 1
 block = 8  # character size
 img = cv2.resize(img,(int(img.shape[0]*scale),int(img.shape[1]*scale)),interpolation=cv2.INTER_CUBIC)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-gray = cv2.equalizeHist(gray)  
+#gray = cv2.equalizeHist(gray)  
 ascii_img = gray
 ascii_img = cv2.resize(ascii_img,(int(gray.shape[0]*block),int(gray.shape[1]*block)),interpolation=cv2.INTER_CUBIC)
 ascii_img[:,:] = 255
